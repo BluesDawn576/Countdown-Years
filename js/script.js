@@ -1,19 +1,44 @@
-function show_runtime()
-{
-    window.setTimeout("show_runtime()",1000);
-    X=new Date("01/25/2020 00:00:00");
-    Y=new Date();T=(X.getTime()-Y.getTime());
-    M=24*60*60*1000;
-    a=T/M;
-    A=Math.floor(a);
-    b=(a-A)*24;
-    B=Math.floor(b);
-    c=(b-B)*60;
-    C=Math.floor((b-B)*60);
-    D=Math.floor((c-C)*60);
-    document.getElementById('day').innerText = A;
-    document.getElementById('hour').innerText = B;
-    document.getElementById('minute').innerText = C;
-    document.getElementById('second').innerText = D;
-}
-show_runtime();
+var stop = false;
+function show_runtime() {
+        var newDay = '2020/1/24 00:00:00';//目标日期
+        var countDate = new Date(newDay);
+        var now = new Date().getTime()
+        gap = countDate - now;
+        var second = 1000
+        var minute = second * 60
+        var hour = minute * 60
+        var day = hour * 24
+  
+        var d = Math.floor(gap / day)
+        var h = Math.floor((gap % day) / hour)
+        var m = Math.floor((gap % hour) / minute)
+        var s = Math.floor((gap % minute) / second)
+
+        if(d,h,m,s < 0)//如果出现负数则停止计时器
+        {
+            stop = true;
+        }else{
+	    // 倒计时
+        document.getElementById('day').innerText = d
+        document.getElementById('hour').innerText = h
+        document.getElementById('minute').innerText = m
+        document.getElementById('second').innerText = s
+        }
+      }
+      //显示春节祝福语
+      function newyear() {
+        document.getElementById('title').innerText = "Happy Spring Festival"
+        document.getElementById('day').innerText = "春"
+        document.getElementById('hour').innerText = "节"
+        document.getElementById('minute').innerText = "快"
+        document.getElementById('second').innerText = "乐"
+    }
+  
+      var time = setInterval(() => {
+        show_runtime()
+        if (stop === true) {
+            newyear();
+            clearInterval(time);
+        }
+      }, 1000)
+    
