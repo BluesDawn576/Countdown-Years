@@ -1,1 +1,79 @@
-@media screen and (max-width:1025px){*{margin:0;padding:0;}body{background:url(../image/bg2.jpg);background-size:cover;background-position:center center;height:100%;}.container{margin:0;color:#fff;line-height:normal;position:absolute;align-items:center;left:5%;right:5%;}.container h2{font-size:6em;text-align:center;margin:10% 0;color:#fff;}.container h2 span{color:#fff;display:block;text-align:center;font-size:0.3em;font-weight:300;letter-spacing:2px;}.countdown{display:flex;justify-content:space-around;margin:0;}.countdown div{width:20%;height:13vw;margin:0 10px;line-height:13vw;font-size:2em;position:relative;text-align:center;background:#333333;color:#ffffff;font-weight:500;border-radius:10px 10px 0 0;}.countdown div:before{content:'';position:absolute;bottom:-30px;left:0;width:100%;height:30px;background:#B00000;color:#ffffff;font-size:0.4em;line-height:35px;font-weight:300;border-radius:0 0 10px 10px;}.countdown #day:before{content:'天';}.countdown #hour:before{content:'时';}.countdown #minute:before{content:'分';}.countdown #second:before{content:'秒';}}
+@media screen and (max-width:1025px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: url(../image/bg2.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+    }
+    .container {
+        margin: 0;
+        color: #fff;
+        line-height: normal;
+        position: absolute;
+        align-items: center;
+        left: 5%;
+        right: 5%;
+    }
+    .container h2 {
+        font-size: 6em;
+        text-align: center;
+        margin: 10% 0;
+        color: #fff;
+    }
+    .container h2 span {
+        color: #fff;
+        display: block;
+        text-align: center;
+        font-size: 0.3em;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+    .countdown {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+    }
+    .countdown div {
+        width: 20%;
+        height: 13vw;
+        margin: 0 10px;
+        line-height: 13vw;
+        font-size: 2em;
+        position: relative;
+        text-align: center;
+        background: #333333;
+        color: #ffffff;
+        font-weight: 500;
+        border-radius: 10px 10px 0 0;
+    }
+    .countdown div:before {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: #B00000;
+        color: #ffffff;
+        font-size: 0.4em;
+        line-height: 35px;
+        font-weight: 300;
+        border-radius: 0 0 10px 10px;
+    }
+    .countdown #day:before {
+        content: '天';
+    }
+    .countdown #hour:before {
+        content: '时';
+    }
+    .countdown #minute:before {
+        content: '分';
+    }
+    .countdown #second:before {
+        content: '秒';
+    }
+}
