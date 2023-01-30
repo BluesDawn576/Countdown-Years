@@ -6,7 +6,7 @@
 
 2023.1.30  
 更换背景图 - 璃月海灯节  
-实现自增年份（理论能支持到2100年），其中使用了阴阳历互转js库https://github.com/jjonline/calendar.js
+实现自增年份（理论能支持到2100年），其中使用了阴阳历互转js库 https://github.com/jjonline/calendar.js
 
 2022.2.9  
 修改年份为2023
